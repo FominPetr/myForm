@@ -29,12 +29,17 @@ body {
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
 }
-.form-inner input[type="submit"] {
+.form-inner button {
   margin-top: 30px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
   background: #3AA6D0;
+  border: none;
   border-bottom: 4px solid #024C68	;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
+  cursor: pointer;
 }
 .form-inner textarea {
     resize: none;
@@ -45,4 +50,13 @@ body {
   font-weight: 500;
   font-size: 24px;
   color: #707981;
+}
+
+.left,.center,.right {
+    border: 2px solid black;
+    width:33%; 
+    height:100%; 
+    float:left; 
+    text-align:center;
+    padding: 10px;
 }

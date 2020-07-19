@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-
-<?php
-    require 'connectToDB';
-    
-    $db = new PDO('mysql:host=localhost;dbname='.$db, $user, $pass);
-    $dbh->exec('SET CHARACTER SET utf8');
-    echo <?php ?>;
-?>
 <html lang="ru">
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,14 +7,21 @@
 </head>
 
 <body>
-    <form class="decor">
+   <div class="left"></div>
+   <div class="center">
+       <form class="decor" method="post">
         <div class="form-inner">
             <h3>Написать нам</h3>
-            <input type="text" placeholder="Username">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Сообщение..." rows="3"></textarea>
-            <input type="submit" value="Отправить">
+            <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
+            <input type="text" id="name" name="name" placeholder="Имя" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Отчество" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea id="comment" name="comment" placeholder="Сообщение..." rows="3" required></textarea>
+            <button id="send">Отправить</button>
         </div>
     </form>
+    </div>
+   <div class="right"></div>
 </body>
+<script src="js/mainFunc.js"></script>
 </html>
