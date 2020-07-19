@@ -1,3 +1,5 @@
+//Функция получает строку из файла getData() разбивает строку на массив данных
+//и выводит данные в упорядоченном ввиде на экран
 function getData() {
     let xmlhttpGet = new XMLHttpRequest();
     xmlhttpGet.open('GET', 'getData.php');
