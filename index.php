@@ -21,7 +21,7 @@
         </div>
     </form>
     </div>
-   <div class="right"></div>
+   <div class="right" id="right"></div>
 </body>
 <script src="js/mainFunc.js"></script>
 </html>

@@ -21,14 +21,14 @@
         $queryMail->execute(array(':email' => $_POST['email']));
         $queryMailSafe = $queryMail->fetch();
         
-        $queryInsertSecond = $db->prepare("INSERT into comments(idUser,text) VALUES(:idUser,:comment)");
+        $queryInsertSecond = $db->prepare("INSERT into comments(idUser,text,date) VALUES(:idUser,:comment,NOW())");
         $queryInsertSecond->bindValue(':idUser', $queryMailSafe['idUser']);
         $queryInsertSecond->bindValue(':comment', $_POST['comment']);
         $res=$queryInsertSecond->execute();
         var_dump($res);
     }
     else {
-        $queryInsert = $db->prepare("INSERT into comments(idUser,text) VALUES(:idUser,:comment)");
+        $queryInsert = $db->prepare("INSERT into comments(idUser,text,date) VALUES(:idUser,:comment,NOW())");
         $queryInsert->bindValue(':idUser', $queryMailSafe['idUser']);
         $queryInsert->bindValue(':comment', $_POST['comment']);
         $res=$queryInsert->execute();

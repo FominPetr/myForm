@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
   background: #3AA6D0;
   border: none;
-  border-bottom: 4px solid #024C68	;
+  border-bottom: 4px solid #024C68;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -53,10 +53,39 @@ body {
 }
 
 .left,.center,.right {
-    border: 2px solid black;
     width:33%; 
     height:100%; 
     float:left; 
-    text-align:center;
     padding: 10px;
+    overflow: scroll;
+}
+
+.block {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 0 0 5px;
+    padding: 10px;
+    background-color: #024C68;
+}
+
+.top {
+    width: 100%;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.top > h4{
+    margin: 0;
+    font-size: 20px;
+    color: aquamarine;
+}
+.top > h5{
+    margin: 0;
+    font-size: 14px;
+    color: aquamarine;
+}
+.top > h6{
+    margin: 0;
+    color: aquamarine;
 }
